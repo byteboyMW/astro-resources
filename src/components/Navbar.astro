@@ -1,0 +1,64 @@
+<nav class="p-3 bg-teal-900 shadow md:flex md:items-center md:justify-between opacity-80 fixed w-full z-[1]">
+  <div class="flex justify-between items-center">
+    <span class="text-2xl cursor-pointer">
+      <img class="h-10 inline" src="TNR.png" alt="" />
+    </span>
+
+    <span class="cursor-pointer mx-2 md:hidden block">
+      <img id="menu" src="Menu.svg" alt="" />
+      <img id="close" src="Close.svg" class="hidden" alt="" />
+    </span>
+  </div>
+
+  <ul
+    class="md:flex md:items-center z-[2] md:z-auto md:static absolute bg-teal-900 left-0 md:w-auto md:pl-0 pl-7 md:py-0 py-2 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 w-full"
+  >
+    <li class="mx-2 my-6 md:my-0">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500"
+        >Home</a
+      >
+    </li>
+    <li class="mx-2 my-6 md:my-0">
+      <a href="#services" class="text-xl text-white hover:text-cyan-500 duration-500"
+        >Services</a
+      >
+    </li>
+    <li class="mx-2 my-6 md:my-0">
+      <a href="#about" class="text-xl text-white hover:text-cyan-500 duration-500"
+        >About</a
+      >
+    </li>
+    <li class="mx-2 my-6 md:my-0">
+      <a href="#testimonials" class="text-xl text-white hover:text-cyan-500 duration-500"
+        >Testimonials</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const menu = document.getElementById("menu");
+  const close = document.getElementById("close");
+  let list = document.querySelector("ul");
+
+  menu.addEventListener("click", () => {
+    Toggle();
+  });
+
+  close.addEventListener("click", () => {
+    Toggle();
+  });
+
+  function Toggle() {
+    menu.classList.toggle("hidden");
+    close.classList.toggle("hidden");
+
+    if (menu.classList.contains("hidden")) {
+      list.classList.add("top-[64px]");
+      list.classList.add("opacity-100");
+    } else {
+      list.classList.remove("top-[64px]");
+      list.classList.remove("opacity-100");
+    }
+  }
+</script>

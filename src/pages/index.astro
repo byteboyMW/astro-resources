@@ -1,0 +1,36 @@
+---
+import InfoComponent from "../components/InfoComponent.astro";
+import Navbar from "../components/Navbar.astro";
+import Banner from "../components/Banner.astro";
+import About from "../components/About.astro";
+import Header from "../components/Header.astro";
+import Testimonial from "../components/Testimonial.astro";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <title>Neighborhood Resources</title>
+  </head>
+  <body>
+    <div class="max-h-screen">
+      <div class="bg-gradient-to-r from-teal-600 to-green-500 h-full">
+        <Navbar />
+        <Banner />
+        <p id="services"></p>
+        <Header text="What we have to offer:" />
+        <InfoComponent />
+        <Header text="About the business:" />
+        <About />
+        <Header text="Testimonials:" />
+        <Testimonial/>
+      </div>
+    </div>
+  </body>
+</html>
