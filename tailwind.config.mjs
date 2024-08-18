@@ -4,14 +4,10 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': {'max': '458px'},
-        'sh': {'raw': '(max-height: 740px)'},
-        'mh': {'raw': '(min-height: 736px)'},
-      }
+        xs: { 'max': "458px" },
+        sh: [{ 'raw': "(max-height: 740px)" }],
+      },
     },
-    
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
 };
